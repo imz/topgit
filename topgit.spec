@@ -2,7 +2,7 @@
 
 Name: topgit
 Version: 0.7
-Release: alt1.git20090512
+Release: alt2.git20090512
 
 Summary: Patch queue manager for Git
 License: GPLv2
@@ -34,8 +34,12 @@ branch for each patch and providing few tools to maintain the branches.
 %_bindir/*
 %_datadir/%name
 %_prefix/libexec/%name
+%doc README COPYING
 
 %changelog
+* Sun May 17 2009 Maxim Ivanov <redbaron at altlinux.org> 0.7-alt2.git20090512
+- Added README and COPYING files
+
 * Sun May 17 2009 Maxim Ivanov <redbaron at altlinux.org> 0.7-alt1.git20090512
 - Initial build for Sisyphus
 
