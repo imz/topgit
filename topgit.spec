@@ -2,7 +2,7 @@
 
 Name: topgit
 Version: 0.7
-Release: alt2.git20090512
+Release: alt2.git20090527
 
 Summary: Patch queue manager for Git
 License: GPLv2
