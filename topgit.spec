@@ -37,6 +37,9 @@ branch for each patch and providing few tools to maintain the branches.
 %doc README COPYING
 
 %changelog
+* Sat Jun 13 2009 Maxim Ivanov <redbaron at altlinux.org> 0.7-alt2.git20090527
+- Update from upstream
+
 * Sun May 17 2009 Maxim Ivanov <redbaron at altlinux.org> 0.7-alt2.git20090512
 - Added README and COPYING files
 
