@@ -2,7 +2,7 @@
 
 Name: topgit
 Version: 0.7
-Release: alt2.git20090527
+Release: alt3.git20090527
 
 Summary: Patch queue manager for Git
 License: GPLv2
@@ -25,7 +25,7 @@ branch for each patch and providing few tools to maintain the branches.
 %setup 
 
 %build
-%make_build
+%make_build prefix=%_prefix
 
 %install
 %makeinstall
@@ -37,6 +37,9 @@ branch for each patch and providing few tools to maintain the branches.
 %doc README COPYING
 
 %changelog
+* Fri Jul 24 2009 Maxim Ivanov <redbaron at altlinux.org> 0.7-alt3.git20090527
+- Corrected prefix
+
 * Sat Jun 13 2009 Maxim Ivanov <redbaron at altlinux.org> 0.7-alt2.git20090527
 - Update from upstream
 
