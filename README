@@ -649,7 +649,23 @@ tg next
 	  -i		show dependencies based on index instead of branch
 	  -w		show dependencies based on working tree instead of branch
 
-TODO: tg rename
+tg rename
+~~~~~~~~~
+	There is no such command yet, but here's a receipe what ``tg rename OLD
+	NEW'' would do:
+
+	  - Have a clean state before beginning.
+	  - Assert NEW doesn't already exist.
+	  - git branch -m OLD NEW
+	  - git update-ref refs/top-bases/NEW refs/top-bases/OLD ''
+	  - for BRANCH in (all branches that depend on OLD,
+			   i.e. reference OLD in .topdeps); do
+	      git checkout BRANCH
+	      sed -i 's%^OLD$%NEW$' .topdeps
+	      git commit -m 'OLD -> NEW' .topdeps
+	    done
+	  - tg summary
+	  - tg update as appropriate
 
 IMPLEMENTATION
 --------------
