@@ -12,7 +12,7 @@ BuildArch: noarch
 
 Packager: Maxim Ivanov <redbaron@altlinux.org>
 
-Source0: topgit-0.7.tar
+Source0: topgit-%version.tar
 
 %description
 TopGit is designed especially for the case
