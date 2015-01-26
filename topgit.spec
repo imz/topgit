@@ -15,11 +15,30 @@ Packager: Maxim Ivanov <redbaron@altlinux.org>
 Source0: topgit-%version.tar
 
 %description
-TopGit is designed especially for the case
+TopGit aims to make handling of large amounts of interdependent topic
+branches easier.  It is designed especially for the case
 when you maintain a queue of third-party patches on top of another
 (perhaps Git-controlled) project and want to easily organize, maintain
 and submit them - TopGit achieves that by keeping a separate topic
-branch for each patch and providing few tools to maintain the branches.
+branch for each patch and providing a few tools to maintain the branches.
+
+TopGit has been designed around three main tenets:
+
+(i) TopGit is as thin layer on top of Git as possible.
+You still maintain your index and commit using Git, TopGit will
+only automate few indispensable tasks.
+
+(ii) TopGit is anxious about _keeping_ your history. It will
+never rewrite your history and all metadata is also tracked by Git,
+smoothly and non-obnoxiously. It is good to have a _single_ point
+when the history is cleaned up, and that is at the point of inclusion
+in the upstream project; locally, you can see how your patch has evolved
+and easily return to older versions.
+
+(iii) TopGit is specifically designed to work in distributed
+environment. You can have several instances of TopGit-aware repositories
+and smoothly keep them all up-to-date and transfer your changes between
+them.
 
 %prep
 %setup 
