@@ -44,7 +44,7 @@ them.
 %setup 
 
 %build
-%make_build prefix=%_prefix
+%make_build prefix=%_prefix --assume-new=precheck
 
 %install
 %makeinstall
