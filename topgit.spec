@@ -4,7 +4,7 @@ Name: topgit
 Version: 0.9
 Release: alt1.git20130407
 
-Summary: Patch queue manager for Git
+Summary: A different patch queue manager for Git
 License: GPLv2
 Group: Development/Tools
 Url: https://github.com/greenrd/topgit
