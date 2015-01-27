@@ -14,6 +14,8 @@ Packager: Maxim Ivanov <redbaron@altlinux.org>
 
 Source0: topgit-%version.tar
 
+BuildRequires(check): git-core
+
 %description
 TopGit aims to make handling of large amounts of interdependent topic
 branches easier.  It is designed especially for the case
@@ -50,6 +52,11 @@ rm -f precheck
 
 %install
 %makeinstall
+
+%check
+make precheck
+# TODO: it has a check against a hardcoded Git version;
+# we want to automatically add that version to RPM deps.
 
 %files 
 %_bindir/*
