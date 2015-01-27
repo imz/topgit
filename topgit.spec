@@ -44,7 +44,9 @@ them.
 %setup 
 
 %build
-%make_build prefix=%_prefix --assume-old=precheck
+touch --date=tomorrow precheck
+%make_build prefix=%_prefix
+rm -f precheck
 
 %install
 %makeinstall
