@@ -1,0 +1,12 @@
+From: Ivan Zakharyaschev <imz@altlinux.org>
+Subject: [PATCH] tg_rename
+
+Going to implement "tg rename OLD NEW".
+
+For the beginning -- a simple shortcut to do this only for leaves, i.e.,
+branches with no dependents.
+
+As for the complete implementation, 
+see [Sketch out what tg rename OLD NEW would do](https://groups.google.com/forum/#!topic/git-version-control/AG9AIk3DMBM)
+as proposed by Thomas Schwinge and acknowledged by David Bremner
+and Uwe Kleine-König on 2010-01-27 in #topgit (freenode).
