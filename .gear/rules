@@ -1,2 +1,2 @@
 tar: upstream:.
-
+diff: top-bases/tg_rename:. tg_rename:. name=topgit-tg_rename.patch
