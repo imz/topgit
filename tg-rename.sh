@@ -24,8 +24,8 @@ fi
 git branch -m "$OLD" "$NEW"
 git update-ref refs/top-bases/"$NEW" refs/top-bases/"$OLD" ''
 
-# Clean up the old ref: refs/top-bases/OLD
-# 
+info "Cleaning up the old ref(s);"
+
 # we use a feature of 'tg delete' described in the README:
 # 
 #     The '-f' option is also useful to force removal of a branch's
@@ -33,6 +33,7 @@ git update-ref refs/top-bases/"$NEW" refs/top-bases/"$OLD" ''
 #     certain TopGit commands complain, because the base of branch B
 #     is still there.
 
+info "the warning is OK because it's been renamed already:"
 $tg delete -f "$OLD"
 
 #   - for BRANCH in (all branches that depend on OLD,
