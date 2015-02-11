@@ -658,6 +658,7 @@ tg rename
 	  - Assert NEW doesn't already exist.
 	  - git branch -m OLD NEW
 	  - git update-ref refs/top-bases/NEW refs/top-bases/OLD ''
+	  - Clean up the old ref: refs/top-bases/OLD
 	  - for BRANCH in (all branches that depend on OLD,
 			   i.e. reference OLD in .topdeps); do
 	      git checkout BRANCH

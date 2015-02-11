@@ -24,6 +24,17 @@ fi
 git branch -m "$OLD" "$NEW"
 git update-ref refs/top-bases/"$NEW" refs/top-bases/"$OLD" ''
 
+# Clean up the old ref: refs/top-bases/OLD
+# 
+# we use a feature of 'tg delete' described in the README:
+# 
+#     The '-f' option is also useful to force removal of a branch's
+#     base, if you used `git branch -D B` to remove branch B, and then
+#     certain TopGit commands complain, because the base of branch B
+#     is still there.
+
+$tg delete -f "$OLD"
+
 #   - for BRANCH in (all branches that depend on OLD,
 #   		   i.e. reference OLD in .topdeps); do
 #       git checkout BRANCH
