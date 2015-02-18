@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # tg rename -- renames a branch (works only for leaves now)
 
