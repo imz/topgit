@@ -4,10 +4,10 @@
 
 set -e # exit on any error immediately!
 
-OLD="$1"
-NEW="$2"
+readonly OLD="$1"
+readonly NEW="$2"
 
-children=($($tg next "$OLD"))
+readonly children=($($tg next "$OLD"))
 
 if [[ "${children[@]}" ]]; then # non-empty
     die "Correct work not implemented for non-leaves, but $OLD has dependents: ${children[@]}."
