@@ -1,12 +1,15 @@
 From: Ivan Zakharyaschev <imz@altlinux.org>
-Subject: [PATCH] tg_rename
+Subject: [PATCH] tg_rebase
 
-Going to implement "tg rename OLD NEW".
+Going to implement "tg rebase BASE [CURRENT] [--onto NEW]"
+-- a convenient shortcut when prettifying your local history.
 
-For the beginning -- a simple shortcut to do this only for leaves, i.e.,
-branches with no dependents.
+Of course, it is allowed only for leaves, 
+otherwise it would spoil dependent branches.
+(This problem is hardly solvable even theoretically in a nice way,
+unlike in the case of tg-rename.)
 
-As for the complete implementation, 
-see [Sketch out what tg rename OLD NEW would do](https://groups.google.com/forum/#!topic/git-version-control/AG9AIk3DMBM)
-as proposed by Thomas Schwinge and acknowledged by David Bremner
-and Uwe Kleine-König on 2010-01-27 in #topgit (freenode).
+Remember that rebasing spoils published history!
+
+The plan is to make it a shortcut on top of tg-rename
+(and creating temporary branch names, and using git-rebase).
