@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# tg rename -- renames a branch (works only for leaves now)
+# tg rename-leaf -- renames a branch (works only for leaves)
 
 set -e # exit on any error immediately!
 

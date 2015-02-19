@@ -668,7 +668,8 @@ tg rename
 	  - tg summary
 	  - tg update as appropriate
 	  
-	Now there is a placeholder for it, which works only for leaves
+	Now there is a poor-man's replacement for it (called "tg rename-leaf"),
+	which works only for leaves
 	(i.e., branches that have no dependents, thus omitting the step
 	with a "for"-loop above.)
 
