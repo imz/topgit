@@ -2,7 +2,7 @@
 
 Name: topgit
 Version: 0.9
-Release: alt3.git20130407
+Release: alt4.git20130407
 
 Summary: A different patch queue manager for Git
 License: GPLv2
@@ -12,6 +12,7 @@ BuildArch: noarch
 
 Source0: topgit-%version.tar
 Patch0: topgit-tg_rename.patch
+Patch1: topgit-tg_update-custom-merge.patch
 
 BuildRequires(check): git-core
 
@@ -44,6 +45,7 @@ them.
 %prep
 %setup
 %patch0 -p1
+%patch1 -p1
 
 %build
 touch --date=tomorrow precheck
@@ -65,6 +67,11 @@ make precheck
 %doc README COPYING
 
 %changelog
+* Thu Feb 19 2015 Ivan Zakharyaschev <imz@altlinux.org> 0.9-alt4.git20130407
+- tg update: pass a custom merge command with either TG_MERGE or
+  --this-with (useful for rebasing or for "merge -s ours" in certain
+  gear-workflows at ALT, partially solves ALT#30757).
+
 * Wed Feb 11 2015 Ivan Zakharyaschev <imz@altlinux.org> 0.9-alt3.git20130407
 - tg_rename: Clean up the old ref (with "tg delete -f").
 
