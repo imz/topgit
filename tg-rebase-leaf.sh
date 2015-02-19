@@ -21,3 +21,13 @@
 # 
 # This must be very similar to the operation of "tg update",
 # with the difference that "tg update" merges new-BASE into HEAD.
+
+# I think a working solution would be to simply substitute
+# "git rebase --preserve-merges" for "git merge" in "tg update".
+# It might even work for recursive updates.
+# -- https://github.com/greenrd/topgit/issues/40#issuecomment-74869975
+# 
+# A hack is to pass it as an environment variable (instead of an option),
+# which would also allow to satisfy another wish:
+# specifying special strategies (like -s ours) when updating special branches.
+# -- https://github.com/greenrd/topgit/issues/42
