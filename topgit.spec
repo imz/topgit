@@ -45,7 +45,25 @@ them.
 %prep
 %setup
 %patch0 -p1
+rm -f .topdeps .topmsg # clean up topgit internal files
 %patch1 -p1
+rm -f .topdeps .topmsg # clean up topgit internal files
+
+# TODO: the problem with topgit internal files should be solved.
+# The problem is like this
+# (http://www.altlinux.org/Git/MergingBranches#.D0.B2.D0.BC.D0.B5.D1.81.D1.82.D0.B5_.D1.81_gear):
+# 
+# `tg export` exports nice patches, but it can't be called from `gear`.
+# Gear is stupid and includes them in the patches.
+# 
+# Possible solutions:
+# 
+# * teach Gear to use topgit (extra dependency?);
+# * modify TopGit not to store the meta-info (.topmsg, .topdeps)
+#   in Git trees (https://github.com/greenrd/topgit/issues/38);
+# * somehow adapt `tg export` to the needs of a Gear-based workflow
+#   (some relevant remarks and objections: 
+#   https://github.com/greenrd/topgit/issues/42#issuecomment-75389885).
 
 %build
 touch --date=tomorrow precheck
