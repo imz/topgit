@@ -12,7 +12,7 @@ BuildArch: noarch
 
 Source0: topgit-%version.tar
 Patch0: topgit-tg_rename.patch
-Patch1: topgit-tg_update-custom-merge.patch
+Patch1: topgit-custom-merge.patch
 
 BuildRequires(check): git-core
 
@@ -86,7 +86,7 @@ make precheck
 
 %changelog
 * Thu Feb 19 2015 Ivan Zakharyaschev <imz@altlinux.org> 0.9-alt4.git20130407
-- tg update: pass a custom merge command with either TG_MERGE or
+- tg update, tg create: pass a custom merge command with either TG_MERGE or
   --this-with (useful for rebasing or for "merge -s ours" in certain
   gear-workflows at ALT, partially solves ALT#30757).
 

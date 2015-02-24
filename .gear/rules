@@ -1,3 +1,3 @@
 tar: upstream:.
 diff: top-bases/tg_rename:. tg_rename:. name=topgit-tg_rename.patch
-diff: top-bases/tg_update-custom-merge:. tg_update-custom-merge:. name=topgit-tg_update-custom-merge.patch
+diff: top-bases/custom-merge:. custom-merge:. name=topgit-custom-merge.patch
