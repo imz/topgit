@@ -2,7 +2,7 @@
 
 Name: topgit
 Version: 0.9
-Release: alt4.git20130407
+Release: alt4.git20150225
 
 Summary: A different patch queue manager for Git
 License: GPLv2
@@ -85,7 +85,7 @@ make precheck
 %doc README COPYING
 
 %changelog
-* Thu Feb 19 2015 Ivan Zakharyaschev <imz@altlinux.org> 0.9-alt4.git20130407
+* Thu Feb 25 2015 Ivan Zakharyaschev <imz@altlinux.org> 0.9-alt4.git20150225
 - tg update, tg create: pass a custom merge command with either TG_MERGE or
   --this-with (useful for rebasing or for "merge -s ours" in certain
   gear-workflows at ALT, partially solves ALT#30757).
