@@ -1,0 +1,14 @@
+From: Ivan Zakharyaschev <imz@altlinux.org>
+Subject: [gear] ALT Sisyphus
+
+Packaging with gear for ALT Sisyphus.
+
+Dependent branches with upstream sources and patches should be
+merged with
+
+    tg update --this-with 'git merge -s ours -m merge-s_ours'
+
+(not that the custom commit message is given as one word, to avoid problems
+with splitting).
+
+Maintain .gear/rules in accordance with our TopGit branches for patches.
